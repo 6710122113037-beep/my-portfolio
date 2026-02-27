@@ -1,20 +1,79 @@
-
 <!DOCTYPE html>
-
 <html>
-
 <head>
+    <title>My Portfolio - Jirarat</title>
 
-	<title>My First Cloud App</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;500;700&display=swap" rel="stylesheet">
 
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Kanit', sans-serif;
+            background: linear-gradient(135deg, #7b2ff7, #f107a3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            width: 420px;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            font-weight: 300;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        p {
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        .highlight {
+            color: #ffd700;
+            font-weight: 500;
+        }
+
+        .contact {
+            margin-top: 20px;
+            padding: 10px;
+            background: rgba(0,0,0,0.3);
+            border-radius: 10px;
+        }
+    </style>
 </head>
 
 <body>
+    <div class="card">
+        <h1>💜 จิรารัตน์ คล้ายเกตุ</h1>
+        <h2>ชื่อเล่น: เม็ดทราย | อายุ 20 ปี</h2>
 
-	<h1>Hello World!</h1>
+        <p>
+            🎂 เกิดวันที่: 6 ตุลาคม 2548 <br>
+            🎨 สีที่ชอบ: สีม่วง <br>
+            🐱 ชอบแมว <br>
+            🎵 งานอดิเรก: ฟังเพลง เล่นกีต้า เล่นเกม ดูหนัง อ่านนิยาย
+        </p>
 
-	<p>This application was deployed to the cloud by an IT student.</p>
-
+        <div class="contact">
+            📱 ติดต่อ Line: <span class="highlight">medsaai21</span>
+        </div>
+    </div>
 </body>
-
 </html>
