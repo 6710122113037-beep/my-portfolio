@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Modern Profile</title>
+<title>Galaxy Profile</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 *{
@@ -20,110 +20,129 @@ body{
     display:flex;
     justify-content:center;
     align-items:center;
-    background: linear-gradient(135deg,#7b2ff7,#f107a3);
+    background: linear-gradient(135deg,#5f2cff,#ff2da0);
     overflow:hidden;
+    position:relative;
 }
 
-/* พื้นหลังจุดวิบวับ */
+/* เอฟเฟกต์ดาว */
 body::before{
     content:"";
     position:absolute;
     width:100%;
     height:100%;
-    background-image: radial-gradient(rgba(255,255,255,0.3) 1px, transparent 1px);
-    background-size: 30px 30px;
-    opacity:0.3;
+    background-image: radial-gradient(rgba(255,255,255,0.6) 1px, transparent 1px);
+    background-size: 25px 25px;
+    opacity:0.25;
 }
 
+/* การ์ดหลัก */
 .card{
-    position:relative;
-    width:900px;
-    display:flex;
-    gap:40px;
-    padding:40px;
-    border-radius:30px;
-    backdrop-filter: blur(15px);
+    width:1100px;
+    padding:50px;
+    border-radius:35px;
     background: rgba(255,255,255,0.15);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    backdrop-filter: blur(25px);
     border:1px solid rgba(255,255,255,0.3);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.3);
+    display:flex;
+    gap:60px;
     color:white;
+    position:relative;
 }
 
-.profile-img{
-    width:300px;
-    height:400px;
-    border-radius:20px;
+/* รูปโปรไฟล์ */
+.profile{
+    width:350px;
+    height:450px;
+    border-radius:30px;
     overflow:hidden;
-    box-shadow:0 10px 30px rgba(0,0,0,0.3);
-    background:#ffffff20;
+    box-shadow:0 20px 40px rgba(0,0,0,0.4);
 }
 
-.profile-img img{
+.profile img{
     width:100%;
     height:100%;
     object-fit:cover;
-    display:block;
 }
 
+/* ฝั่งข้อมูล */
 .info{
     flex:1;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
 }
 
 .info h1{
-    font-size:40px;
-    margin-bottom:10px;
+    font-size:48px;
+    font-weight:700;
 }
 
 .subtitle{
-    font-size:20px;
+    font-size:22px;
+    margin-top:10px;
     margin-bottom:30px;
     opacity:0.9;
 }
 
-.detail{
-    margin-bottom:15px;
-    font-size:18px;
+/* กล่องข้อมูลด้านใน */
+.detail-box{
+    padding:30px;
+    border-radius:25px;
+    border:1px solid rgba(255,255,255,0.3);
+    background: rgba(255,255,255,0.08);
+    margin-bottom:30px;
+    line-height:1.9;
+    font-size:20px;
 }
 
+/* ปุ่ม LINE */
 .line-btn{
-    margin-top:30px;
-    padding:15px 30px;
-    border:none;
+    display:inline-block;
+    padding:18px 45px;
     border-radius:50px;
-    font-size:18px;
+    font-size:20px;
     font-weight:600;
-    background: linear-gradient(90deg,#00c853,#b2ff59);
+    background: linear-gradient(90deg,#32d84d,#b6ff83);
     color:#222;
-    cursor:pointer;
+    text-decoration:none;
     transition:0.3s;
 }
 
 .line-btn:hover{
     transform:scale(1.05);
-    box-shadow:0 10px 20px rgba(0,0,0,0.3);
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
 }
 
-/* ไอคอนตกแต่ง */
-.decoration{
+/* ของตกแต่ง */
+.dec-heart{
     position:absolute;
+    top:30px;
+    right:40px;
     font-size:40px;
-    opacity:0.7;
 }
 
-.heart{ top:20px; right:40px; }
-.star{ bottom:30px; left:50px; }
-.music{ bottom:60px; right:60px; }
+.dec-cat{
+    position:absolute;
+    bottom:-10px;
+    right:-10px;
+    font-size:90px;
+}
 
-@media(max-width:900px){
+.dec-guitar{
+    position:absolute;
+    top:-20px;
+    right:120px;
+    font-size:70px;
+}
+
+/* responsive */
+@media(max-width:1000px){
     .card{
         flex-direction:column;
         width:90%;
         text-align:center;
+        gap:30px;
     }
-    .profile-img{
+    .profile{
         margin:auto;
     }
 }
@@ -133,30 +152,33 @@ body::before{
 <body>
 
 <div class="card">
-    
-    <div class="profile-img">
-        <!-- เปลี่ยนเป็นชื่อไฟล์รูปของคุณ -->
-        <img src="./profile.jpg" alt="Profile Image"
-             onerror="this.src='https://via.placeholder.com/300x400?text=Upload+profile.jpg'">
+
+    <!-- รูป -->
+    <div class="profile">
+        <img src="profile.jpg" alt="Profile">
     </div>
 
+    <!-- ข้อมูล -->
     <div class="info">
-        <h1>จิรารัตน์ คล้ายเกตุ 💜</h1>
+        <h1>💜 จิรารัตน์ คล้ายเกตุ</h1>
         <div class="subtitle">ชื่อเล่น: เม็ดทราย | อายุ: 20 ปี</div>
 
-        <div class="detail">🎂 เกิดวันที่: 6 ตุลาคม 2548</div>
-        <div class="detail">💜 สีที่ชอบ: สีม่วง</div>
-        <div class="detail">🐱 ชอบแมว</div>
-        <div class="detail">🎵 งานอดิเรก: ฟังเพลง เล่นกีตาร์ เล่นเกม ดูหนัง อ่านนิยาย</div>
+        <div class="detail-box">
+            🎂 เกิดวันที่: 6 ตุลาคม 2548 <br>
+            💜 สีที่ชอบ: สีม่วง <br>
+            🐱 ชอบแมว <br>
+            🎵 งานอดิเรก: ฟังเพลง เล่นกีตาร์ เล่นเกม ดูหนัง อ่านนิยาย
+        </div>
 
-        <button class="line-btn">
-            เพิ่มเพื่อน LINE: medsaai21
-        </button>
+        <a href="#" class="line-btn">
+            เพิ่มเพื่อน LINE : medsaai21
+        </a>
     </div>
 
-    <div class="decoration heart">💖</div>
-    <div class="decoration star">✨</div>
-    <div class="decoration music">🎸</div>
+    <!-- ไอคอนตกแต่ง -->
+    <div class="dec-heart">💖</div>
+    <div class="dec-cat">🐱</div>
+    <div class="dec-guitar">🎸</div>
 
 </div>
 
