@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Galaxy Profile</title>
+<title>Galaxy Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -20,44 +20,50 @@ body{
     display:flex;
     justify-content:center;
     align-items:center;
-    background: linear-gradient(135deg,#5f2cff,#ff2da0);
+    background: linear-gradient(135deg,#6a11cb,#ff4da6);
     overflow:hidden;
     position:relative;
 }
 
-/* เอฟเฟกต์ดาว */
+/* พื้นหลังดาว */
 body::before{
     content:"";
     position:absolute;
     width:100%;
     height:100%;
-    background-image: radial-gradient(rgba(255,255,255,0.6) 1px, transparent 1px);
-    background-size: 25px 25px;
-    opacity:0.25;
+    background-image: radial-gradient(rgba(255,255,255,0.7) 1px, transparent 1px);
+    background-size: 22px 22px;
+    opacity:0.3;
+    animation: sparkle 6s linear infinite;
+}
+
+@keyframes sparkle{
+    0%{transform:translateY(0);}
+    100%{transform:translateY(-40px);}
 }
 
 /* การ์ดหลัก */
 .card{
     width:1100px;
-    padding:50px;
-    border-radius:35px;
+    padding:60px;
+    border-radius:40px;
     background: rgba(255,255,255,0.15);
-    backdrop-filter: blur(25px);
+    backdrop-filter: blur(30px);
     border:1px solid rgba(255,255,255,0.3);
-    box-shadow: 0 25px 60px rgba(0,0,0,0.3);
+    box-shadow: 0 30px 80px rgba(0,0,0,0.4);
     display:flex;
-    gap:60px;
+    gap:70px;
     color:white;
     position:relative;
 }
 
 /* รูปโปรไฟล์ */
 .profile{
-    width:350px;
-    height:450px;
-    border-radius:30px;
+    width:370px;
+    height:480px;
+    border-radius:35px;
     overflow:hidden;
-    box-shadow:0 20px 40px rgba(0,0,0,0.4);
+    box-shadow:0 25px 50px rgba(0,0,0,0.5);
 }
 
 .profile img{
@@ -72,75 +78,74 @@ body::before{
 }
 
 .info h1{
-    font-size:48px;
+    font-size:52px;
     font-weight:700;
 }
 
 .subtitle{
-    font-size:22px;
-    margin-top:10px;
-    margin-bottom:30px;
-    opacity:0.9;
+    font-size:24px;
+    margin:15px 0 35px;
+    opacity:0.95;
 }
 
-/* กล่องข้อมูลด้านใน */
+/* กล่องข้อมูล */
 .detail-box{
-    padding:30px;
-    border-radius:25px;
+    padding:35px;
+    border-radius:30px;
     border:1px solid rgba(255,255,255,0.3);
     background: rgba(255,255,255,0.08);
-    margin-bottom:30px;
-    line-height:1.9;
-    font-size:20px;
+    margin-bottom:35px;
+    line-height:2;
+    font-size:22px;
 }
 
-/* ปุ่ม LINE */
+/* ปุ่ม */
 .line-btn{
     display:inline-block;
-    padding:18px 45px;
-    border-radius:50px;
-    font-size:20px;
+    padding:20px 60px;
+    border-radius:60px;
+    font-size:22px;
     font-weight:600;
-    background: linear-gradient(90deg,#32d84d,#b6ff83);
+    background: linear-gradient(90deg,#2fd65b,#c8ff8f);
     color:#222;
     text-decoration:none;
     transition:0.3s;
 }
 
 .line-btn:hover{
-    transform:scale(1.05);
-    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+    transform:scale(1.07);
+    box-shadow:0 15px 40px rgba(0,0,0,0.4);
 }
 
-/* ของตกแต่ง */
+/* ตกแต่ง */
 .dec-heart{
     position:absolute;
-    top:30px;
-    right:40px;
-    font-size:40px;
+    top:35px;
+    right:50px;
+    font-size:45px;
 }
 
 .dec-cat{
     position:absolute;
-    bottom:-10px;
-    right:-10px;
-    font-size:90px;
+    bottom:-5px;
+    right:10px;
+    font-size:100px;
 }
 
 .dec-guitar{
     position:absolute;
-    top:-20px;
-    right:120px;
-    font-size:70px;
+    top:-15px;
+    right:150px;
+    font-size:80px;
 }
 
-/* responsive */
+/* Responsive */
 @media(max-width:1000px){
     .card{
         flex-direction:column;
-        width:90%;
+        width:95%;
         text-align:center;
-        gap:30px;
+        gap:40px;
     }
     .profile{
         margin:auto;
@@ -153,12 +158,11 @@ body::before{
 
 <div class="card">
 
-    <!-- รูป -->
+    <!-- รูป (ใช้ลิงก์ออนไลน์ รูปไม่หายแน่นอน) -->
     <div class="profile">
-        <img src="profile.jpg" alt="Profile">
+        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" alt="Profile">
     </div>
 
-    <!-- ข้อมูล -->
     <div class="info">
         <h1>💜 จิรารัตน์ คล้ายเกตุ</h1>
         <div class="subtitle">ชื่อเล่น: เม็ดทราย | อายุ: 20 ปี</div>
@@ -175,7 +179,6 @@ body::before{
         </a>
     </div>
 
-    <!-- ไอคอนตกแต่ง -->
     <div class="dec-heart">💖</div>
     <div class="dec-cat">🐱</div>
     <div class="dec-guitar">🎸</div>
