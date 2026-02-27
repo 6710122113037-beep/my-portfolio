@@ -3,114 +3,118 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Portfolio</title>
+<title>My Cute Portfolio</title>
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
 }
 
-body {
-    background: linear-gradient(135deg, #0f0f0f, #1a001f);
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+body{
+    background: linear-gradient(135deg,#ffd6ec,#ffc2e2,#ffb3d9);
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    color:#6b004f;
 }
 
 /* กล่องหลัก */
-.card {
-    background: rgba(255,255,255,0.05);
+.card{
+    background: rgba(255,255,255,0.6);
     backdrop-filter: blur(10px);
-    padding: 40px;
-    width: 90%;
-    max-width: 800px;
-    border-radius: 20px;
-    box-shadow: 0 0 30px rgba(170,0,255,0.4);
-    transition: 0.4s ease;
-    animation: fadeIn 1.2s ease-in-out;
+    padding:40px;
+    width:90%;
+    max-width:700px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 10px 40px rgba(255,105,180,0.3);
+    position:relative;
+    z-index:2;
 }
 
-.card:hover {
-    transform: scale(1.03);
-    box-shadow: 0 0 40px rgba(200,0,255,0.7);
+h1{
+    font-size:30px;
+    margin-bottom:10px;
 }
 
-h1 {
-    font-size: 32px;
-    margin-bottom: 10px;
-    color: #d580ff;
-}
-
-.subtitle {
-    opacity: 0.8;
-    margin-bottom: 20px;
+.subtitle{
+    margin-bottom:20px;
+    font-weight:500;
 }
 
 /* กล่องข้อมูล */
-.info-box {
-    background: rgba(255,255,255,0.05);
-    padding: 20px;
-    border-radius: 15px;
-    margin-bottom: 30px;
+.info-box{
+    background: rgba(255,255,255,0.5);
+    padding:20px;
+    border-radius:15px;
+    margin-bottom:25px;
 }
 
-/* Skills */
-.skills h2 {
-    margin-bottom: 15px;
-    color: #c266ff;
+/* Skill bar */
+.skill{
+    margin-bottom:15px;
+    text-align:left;
 }
 
-.skill {
-    margin-bottom: 15px;
+.bar{
+    width:100%;
+    height:10px;
+    background:#ffd1e8;
+    border-radius:20px;
+    overflow:hidden;
 }
 
-.bar {
-    width: 100%;
-    height: 10px;
-    background: #333;
-    border-radius: 20px;
-    overflow: hidden;
+.bar div{
+    height:100%;
+    border-radius:20px;
+    background:linear-gradient(90deg,#ff69b4,#ff1493);
 }
 
-.bar div {
-    height: 100%;
-    border-radius: 20px;
-}
-
-.html { width: 85%; background: #a200ff; }
-.css { width: 75%; background: #d633ff; }
-.design { width: 70%; background: #ff00cc; }
+.html{ width:85%; }
+.css{ width:75%; }
+.design{ width:70%; }
 
 /* ปุ่ม */
-.buttons {
-    margin-top: 25px;
+.btn{
+    display:inline-block;
+    padding:10px 20px;
+    margin:10px;
+    border-radius:30px;
+    text-decoration:none;
+    color:white;
+    background:linear-gradient(45deg,#ff69b4,#ff1493);
+    transition:0.3s;
 }
 
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-right: 10px;
-    border-radius: 30px;
-    text-decoration: none;
-    color: white;
-    background: linear-gradient(45deg, #8000ff, #ff00cc);
-    transition: 0.3s;
+.btn:hover{
+    transform:scale(1.05);
+    box-shadow:0 5px 20px rgba(255,20,147,0.4);
 }
 
-.btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 0 15px #d633ff;
+/* ซากุระ */
+.sakura{
+    position:fixed;
+    top:-10px;
+    color:#ff69b4;
+    font-size:20px;
+    animation:fall linear infinite;
+    z-index:1;
 }
 
-/* Animation */
-@keyframes fadeIn {
-    from {opacity: 0; transform: translateY(20px);}
-    to {opacity: 1; transform: translateY(0);}
+@keyframes fall{
+    0%{
+        transform:translateY(0) rotate(0deg);
+        opacity:1;
+    }
+    100%{
+        transform:translateY(100vh) rotate(360deg);
+        opacity:0;
+    }
 }
 </style>
 
@@ -118,40 +122,55 @@ h1 {
 <body>
 
 <div class="card">
-    <h1>จิรารัตน์ คล้ายเกตุ</h1>
+    <h1>จิรารัตน์ คล้ายเกตุ 🌸</h1>
     <div class="subtitle">นักศึกษาสายเทคโนโลยี | อายุ 20 ปี</div>
 
     <div class="info-box">
         🎂 เกิดวันที่: 6 ตุลาคม 2548 <br><br>
-        💜 สีที่ชอบ: สีม่วง <br><br>
-        🎸 งานอดิเรก: ฟังเพลง เล่นกีตาร์ เล่นเกม ดูหนัง อ่านนิยาย
+        💗 สีที่ชอบ: ชมพู <br><br>
+        🎀 งานอดิเรก: ฟังเพลง เล่นกีตาร์ เล่นเกม ดูหนัง อ่านนิยาย
     </div>
 
-    <div class="skills">
-        <h2>My Skills</h2>
+    <h2>My Skills</h2>
 
-        <div class="skill">
-            <p>HTML</p>
-            <div class="bar"><div class="html"></div></div>
-        </div>
-
-        <div class="skill">
-            <p>CSS</p>
-            <div class="bar"><div class="css"></div></div>
-        </div>
-
-        <div class="skill">
-            <p>Design</p>
-            <div class="bar"><div class="design"></div></div>
-        </div>
+    <div class="skill">
+        HTML
+        <div class="bar"><div class="html"></div></div>
     </div>
 
-    <div class="buttons">
+    <div class="skill">
+        CSS
+        <div class="bar"><div class="css"></div></div>
+    </div>
+
+    <div class="skill">
+        Design
+        <div class="bar"><div class="design"></div></div>
+    </div>
+
+    <div>
         <a href="#" class="btn">Facebook</a>
         <a href="#" class="btn">Instagram</a>
     </div>
-
 </div>
+
+<script>
+function createSakura(){
+    const sakura = document.createElement("div");
+    sakura.classList.add("sakura");
+    sakura.innerHTML = "🌸";
+    sakura.style.left = Math.random()*100 + "vw";
+    sakura.style.animationDuration = (3 + Math.random()*5) + "s";
+    sakura.style.fontSize = (15 + Math.random()*20) + "px";
+    document.body.appendChild(sakura);
+
+    setTimeout(()=>{
+        sakura.remove();
+    },8000);
+}
+
+setInterval(createSakura,300);
+</script>
 
 </body>
 </html>
