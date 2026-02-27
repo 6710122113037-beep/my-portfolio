@@ -24,7 +24,7 @@ body{
     overflow:hidden;
 }
 
-/* พื้นหลังวิบวับ */
+/* พื้นหลังจุดวิบวับ */
 body::before{
     content:"";
     position:absolute;
@@ -55,12 +55,14 @@ body::before{
     border-radius:20px;
     overflow:hidden;
     box-shadow:0 10px 30px rgba(0,0,0,0.3);
+    background:#ffffff20;
 }
 
 .profile-img img{
     width:100%;
     height:100%;
     object-fit:cover;
+    display:block;
 }
 
 .info{
@@ -104,7 +106,7 @@ body::before{
     box-shadow:0 10px 20px rgba(0,0,0,0.3);
 }
 
-/* ตกแต่งลอยๆ */
+/* ไอคอนตกแต่ง */
 .decoration{
     position:absolute;
     font-size:40px;
@@ -133,8 +135,9 @@ body::before{
 <div class="card">
     
     <div class="profile-img">
-        <!-- เปลี่ยนลิงก์รูปตรงนี้ -->
-        <img src="your-photo.jpg" alt="profile">
+        <!-- เปลี่ยนเป็นชื่อไฟล์รูปของคุณ -->
+        <img src="./profile.jpg" alt="Profile Image"
+             onerror="this.src='https://via.placeholder.com/300x400?text=Upload+profile.jpg'">
     </div>
 
     <div class="info">
@@ -151,7 +154,6 @@ body::before{
         </button>
     </div>
 
-    <!-- ไอคอนตกแต่ง -->
     <div class="decoration heart">💖</div>
     <div class="decoration star">✨</div>
     <div class="decoration music">🎸</div>
